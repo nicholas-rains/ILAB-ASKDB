@@ -1,0 +1,56 @@
+ git push Askdb-Qdrant-PNC feature-dumps 
+ to push code from CGI laptop to AIHUB360 github
+
+FOR 2024-12-09 
+---------------
+++Backend++ 
+
+cd to:
+~/Documents/CrewAI/yhatzi
+
+source .venv/Scripts/activate
+
+Check the branch:
+git branch
+
+go to the branch:
+ Demo-with-tablesUsed-orgl-qry
+
+run the command:
+uv run uvicorn app.main:app --host 0.0.0.0 --port 5070 --reload
+
+
+++Frontend++
+cd to:
+ ~/Documents/aihub360-frontend
+
+ check the branch:
+ git branch 
+
+ make sure you are on the branch:
+FrntEnd-Demo-with-tablesUsed-orglQry
+
+run the command:
+npm start
+
+
+
+USE THE QUESTION TO PASTE:
+1.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Show accounts in the deposit table, that do not have a customer related to it. Display only distinct account ids
+
+
+
+Activate the virtual env
+$ source .venv/Script/acitvate (in windows Bash)
+
+To run, use this command in the Terminal:
+$ uv run uvicorn app.main:app --host 0.0.0.0 --port 5070 --reload
+
+Here is the temp email site (mailtrap.io)
+https://mailtrap.io/inboxes/3276393/messages/4558383005
+
+Poblems with the VS Code Command line? Use this command in the VS Code Bash Terminal:
+$ exec bash
+
+

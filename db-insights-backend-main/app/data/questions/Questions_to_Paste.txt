@@ -1,0 +1,112 @@
+1.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Show accounts in the deposit table, that do not have a customer related to it. Display only distinct account ids
+
+********Good********
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+2.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Show customers who has account in Deposit table, and their tax identification number is null. Display only distinct customer id.
+
+********Good********
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+3.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Number of distinct customers with any missing tax ident type or number
+
+********Good********
+
+// Number of distinct customers with any missing tax ident type or number, and reporting date is within the last 3 months
+
+// ********Good********
+// -----but the answer is "distinct_customer_count": 0 
+//                         IS THIS CORRECT?
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+4.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  ??????????????????Query with MULTIPLE TABLES?????????????????
+
+Get records who have more than 1 unique tax identification number for the same customer id
+
+********Good********
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+5.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Using Customer table only, give me customers who has a Parent to Child relationship and where birth_date of child is less than that of parent. A customer is defined to be a parent of another customer, if the child customer has 'PARENT_CUST_ID ' column with that of the customer. Display only unique Parent ID, Parent birth_date , Child ID and Child birth_date.
+
+********Good********
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+6.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Customers with Country of Citizenship = ‘USA’ and US Residency Status = NRA (Non-Resident Alien).
+
+********Good********
+
+// ********Good********
+// -----has ids in "customer_id" column but empty rows for "birth_date"
+//                         IS THIS CORRECT?
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+7.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+Customers with Country of Citizenship = ‘USA’ and WH8 indicator value exists
+
+********Good********
+
+// ********Good********
+// -----has ids in "customer_id" column but empty rows for "birth_date"
+//                         IS THIS CORRECT?
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+---------------------------------------------------------------------------------------------------------
+8.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  ??????????????????Query with MULTIPLE TABLES?????????????????
+
+Show all the customers and associated accounts for a 'COMMERCIAL LOAN' or a 'MORTGAGE' account classification. Display distinct values and order by customer_id
+
+********Good********
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+---------------------------------------------------------------------------------------------------------
+
+9.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// Show all the accounts with principal outstanding balance greater than $20000.
+// $$$ It should be noted that the solution to this slight difference lied in altering the `tasks.yml` file to include
+// $$$ instructions to always capitalize OPEN.
+
+
+Show all the open accounts with principal outstanding balance greater than $20000.
+
+// **********The slight difference of the line above results in No data found************
+
+// QA Task output: {
+//     "status": "Success",
+//     "message": "The SQL query and results accurately reflect the user's intent and business logic. 
+//     There are currently no open accounts with a principal outstanding balance greater than $20,000."
+// }
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+10.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Show all the accounts in 'CLOSE' status with principal outstanding balance greater than 0.
+
+********Good********
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
