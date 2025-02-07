@@ -9,7 +9,7 @@ from app.services.crew_service import crewai_chat  # Fixed import path
 
 chat_router = APIRouter()
 
-@chat_router.post("/api/db-insights/chat", response_class=JSONResponse)
+@chat_router.post("/chat", response_class=JSONResponse)
 async def handle_chat_query(request: Request, data: ChatInput):
     try:
         # Extract the user query from the incoming request

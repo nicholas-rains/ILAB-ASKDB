@@ -11,6 +11,7 @@ import os
 from crewai.tools import BaseTool
 from pydantic import PrivateAttr
 
+
 from app import settings
 
 # Load environment variables from .env
@@ -93,7 +94,7 @@ class ExecuteSQLTool(BaseTool):
 
         try:
             with self._engine.connect() as conn:
-                conn.execute(text("SET search_path TO db_insights, public"))
+                conn.execute(text("SET search_path TO ask_data, public"))
                 result = conn.execute(text(sql_query))
                 rows = result.fetchall()
                 keys = result.keys()

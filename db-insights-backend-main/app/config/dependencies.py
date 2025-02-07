@@ -7,6 +7,9 @@ def get_llm():
         base_url=settings.azure_openai_endpoint,
         api_version=settings.azure_openai_version,
         api_key=settings.azure_openai_api_key,
-        temperature=0.1
+        temperature=0.1,        
     )
+
+    
+
     return llm

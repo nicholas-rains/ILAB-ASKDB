@@ -1,0 +1,4 @@
+docker-compose.yml
+venv_db_insights_312
+.env
+__pycache__

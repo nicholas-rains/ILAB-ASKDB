@@ -4,7 +4,7 @@ from logging.handlers import RotatingFileHandler
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers.email import email_router
+
 from app.routers.chat import chat_router
 from app.routers.database_route import database_router
 import logging
@@ -13,8 +13,7 @@ import os
 db_insights_service = FastAPI()
 
 # Include the API router
-db_insights_service.include_router(email_router)
-db_insights_service.include_router(chat_router)
+db_insights_service.include_router(chat_router, prefix="/api/askdb")
 db_insights_service.include_router(database_router)
 
 # Configure logging with RotatingFileHandler

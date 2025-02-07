@@ -1,0 +1,13 @@
+{
+  "query": "SELECT DISTINCT d.account_id FROM deposit d LEFT JOIN customer_idntfctn c ON d.account_id = c.customer_id AND d.reporting_date = c.reporting_date WHERE c.idntfctn_type IS NULL OR c.idntfctn_type != 'TAX_ID';",
+  "response": {
+    "Query_1": [
+      {
+        "account_id": 12345
+      },
+      {
+        "account_id": 67890
+      }
+    ]
+  }
+}

@@ -25,10 +25,7 @@ class Settings(BaseSettings):
     pg_port: int = os.environ.get("PG_PORT")
     pg_database: str = os.environ.get("PG_DATABASE")
     pg_password: str = os.environ.get("PG_PASSWORD")
-    email_host: str = os.environ.get("EMAIL_HOST")
-    email_port: int = os.environ.get("EMAIL_PORT")
-    email_host_user: str = os.environ.get("EMAIL_HOST_USER")
-    email_host_password: str = os.environ.get("EMAIL_HOST_PASSWORD")
+
   
 
 class LocalSettings(Settings):

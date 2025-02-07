@@ -1,0 +1,1 @@
+Display unique customer IDs from the Deposit table where customers have an account and their tax identification number is not provided.
